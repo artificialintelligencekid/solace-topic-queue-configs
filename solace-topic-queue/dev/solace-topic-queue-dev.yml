@@ -1,0 +1,21 @@
+solace:
+  host: tcp://localhost:55554
+  username: admin
+  password: admin
+  vpnName: default
+  queues:
+    - name: DEV.ORDERSERVICE.V1
+      topics:
+        - dev/orderservice/v1/created
+        - dev/orderservice/v1/created/success
+        - dev/orderservice/v1/created/failure
+    - name: DEV.PAYMENTSERVICE.V1
+      topics:
+        - dev/paymentservice/v1/created
+        - dev/paymentservice/v1/created/success
+        - dev/paymentservice/v1/created/failure
+    - name: DEV.CARTSERVICE.V1
+      topics:
+        - dev/cartservice/success/v1/created
+        - dev/cartservice/success/v1/created/success
+        - dev/cartservice/success/v1/created/failure
